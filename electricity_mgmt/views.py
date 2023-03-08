@@ -15,6 +15,8 @@ from rest_framework import status
 from rest_framework.response import Response
 # Create your views here.
 
+
+## logint for the team i.e admin
 def view_login(request):
     if request.method == 'POST':
         email = request.POST['email']
@@ -34,7 +36,8 @@ def view_login(request):
         print("in last else")
         return render(request, 'electricity_mgmt/login.html')
 
-    
+## registration for the team i.e admin
+
 def register(request):
     
     if request.method       == 'POST':
@@ -62,6 +65,7 @@ def register(request):
     else:
         return render(request, 'electricity_mgmt/register.html')
 
+ ## function for create application
 def createApplication(request):
     # personal_info = Personal_Info.objects.all()
     # ui = MyUser.objects.get(pk=id)
@@ -95,7 +99,7 @@ def createApplication(request):
         return render(request, 'electricity_mgmt/form.html')
 
     
-
+#listview of all appluication form
 @login_required
 def ApplicationListview(request):  #ListView for all Model or Table at profile page
 
@@ -116,7 +120,7 @@ def ApplicationListview(request):  #ListView for all Model or Table at profile p
 
 
 
-
+#update for application by reviewer
 @login_required
 def updateApplication(request,id):
     # pi = Personal_Info.objects.get(id=id)   
@@ -145,6 +149,7 @@ def updateApplication(request,id):
 
 
 
+##logout of the admin
 
 def user_logout(request):
     logout(request)
