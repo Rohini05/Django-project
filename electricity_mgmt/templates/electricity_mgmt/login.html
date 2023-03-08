@@ -1,0 +1,126 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #0a6096;
+            /* background-image: url('bg.jpg'); */
+        }
+        
+        .red-asterisk {
+            color: red;
+        }
+        
+        .custom-google-btn {
+            background-color: white;
+            border: none;
+            padding: 10px;
+            box-shadow: 1px 1px 5px grey;
+            border-radius: 4px;
+        }
+        
+        .google-icon {
+            width: 20px;
+        }
+        
+        .custom-facebook-btn {
+            background-color: #4267b2;
+            border: none;
+            padding: 10px;
+            box-shadow: 1px 1px 5px grey;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card mt-5">
+
+                    <div class="card-body">
+                        <div class="card-title">
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <div class="text-center"><img src="" class="mr-3" style="width: 50px;" alt=""><img src="{% static 'images/logo_text.svg' %}" style="height: 50px;" alt=""></div>
+                                    <h3 class="text-center mt-3"><strong>Sign In</strong>
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <!-- Login Form -->
+                            <div id="loginForm">
+                                <form method="POST" action="/electricity_mgmt/login">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <input name="email" type="text" required />
+                                        <label for="input" class="control-label">Email <span
+                                                class="red-asterisk">*</span></label><i class="bar"></i>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="password-employee" name="password" type="password" required />
+                                        <label for="input" class="control-label">Password <span
+                                                class="red-asterisk">*</span></label><i class="bar"></i>
+                                    </div>
+                                    <div class="text-left">
+                                        <p>
+                                            <a href="#">
+                                                <small>Forgot Password?</small>
+                                            </a>
+                                        </p>
+                                    </div>
+
+                                    <div class="text-right">
+                                        <button type="submit" id="joinInButton" class="btn btn-primary ">Sign In</button>
+                                    </div>
+                                </form>
+                                <div class="row mt-4">
+                                    <div class="col-6  pr-0">
+                                        <button class="custom-google-btn d-flex justify-content-center align-items-center">
+                                            <div>
+                                                <img class="google-icon" src="{% static 'images/google_icon.svg' %}" alt="">
+                                            </div>
+                                            <div>
+                                                <strong class="pl-3 pr-4" style="color: #7F7F7F;">Sign in with
+                                                    Google</strong>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <div class="col-6 ">
+                                        <button class="custom-facebook-btn d-flex justify-content-center align-items-center">
+                                            <i class="fab fa-facebook-square pr-2" style="color: white; font-size: 24px;"></i><strong class="pl-1 pr-1 text-white">Sign in with Facebook</strong>
+                                            </button>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-md-12">
+                                        <p class="text-center mb-0"><strong>Don't have an account? <a href="{% url 'register' %}">Sign up</a></strong></p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+        </script>
+</body>
