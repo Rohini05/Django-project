@@ -67,14 +67,16 @@
                                 <form method="POST" action="/electricity_mgmt/login">
                                     {% csrf_token %}
                                     <div class="form-group">
-                                        <input name="email" type="text" required />
-                                        <label for="input" class="control-label">Email <span
-                                                class="red-asterisk">*</span></label><i class="bar"></i>
+                                        <label for="input" class="control-label" style="font-weight: bold;">Email <span
+                                            class="red-asterisk">*</span></label><i class="bar"></i><br>
+                                        <input name="email" type="text" required placeholder="xyz@gmail.com" style="width: 80%"/>
+                                        
                                     </div>
                                     <div class="form-group">
-                                        <input id="password-employee" name="password" type="password" required />
-                                        <label for="input" class="control-label">Password <span
-                                                class="red-asterisk">*</span></label><i class="bar"></i>
+                                        <label for="input" class="control-label"  style="font-weight: bold;">Password <span
+                                            class="red-asterisk">*</span></label><i class="bar"></i><br>
+                                        <input id="password-employee" name="password" type="password" required placeholder="**********" style="width: 80%"/>
+                                       
                                     </div>
                                     <div class="text-left">
                                         <p>
@@ -88,24 +90,7 @@
                                         <button type="submit" id="joinInButton" class="btn btn-primary ">Sign In</button>
                                     </div>
                                 </form>
-                                <div class="row mt-4">
-                                    <div class="col-6  pr-0">
-                                        <button class="custom-google-btn d-flex justify-content-center align-items-center">
-                                            <div>
-                                                <img class="google-icon" src="{% static 'images/google_icon.svg' %}" alt="">
-                                            </div>
-                                            <div>
-                                                <strong class="pl-3 pr-4" style="color: #7F7F7F;">Sign in with
-                                                    Google</strong>
-                                            </div>
-                                        </button>
-                                    </div>
-                                    <div class="col-6 ">
-                                        <button class="custom-facebook-btn d-flex justify-content-center align-items-center">
-                                            <i class="fab fa-facebook-square pr-2" style="color: white; font-size: 24px;"></i><strong class="pl-1 pr-1 text-white">Sign in with Facebook</strong>
-                                            </button>
-                                    </div>
-                                </div>
+                                
                                 <div class="row mt-4">
                                     <div class="col-md-12">
                                         <p class="text-center mb-0"><strong>Don't have an account? <a href="{% url 'register' %}">Sign up</a></strong></p>

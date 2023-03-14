@@ -136,27 +136,31 @@
                                     {% csrf_token %}
                                     <input type="hidden" id="user_type" name="is_employee" value="1">
                                     <div class="form-group">
-                                        <input type="text" name="username" required />
-                                        <label for="input" class="control-label">Name <span
-                                                class="red-asterisk">*</span></label><i class="bar"></i>
+                                        <label for="input" class="control-label" style="font-weight: bold;">Name <span
+                                            class="red-asterisk">*</span></label><i class="bar"></i><br>
+                                        <input type="text" name="username" required style="width: 80%" placeholder="xyz"/>
+                                        
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" name="email" required />
-                                        <label for="input" class="control-label">Email <span
-                                                class="red-asterisk">*</span></label><i class="bar"></i>
+                                        <label for="input" class="control-label" style="font-weight: bold;">Email <span
+                                            class="red-asterisk">*</span></label><i class="bar"></i><br>
+                                        <input type="email" name="email" required style="width: 80%" placeholder="xyz@gmail.com"/>
+                                        
                                     </div>
                                     
                                     <div class="form-group">
-                                        <input id="password-employee" type="password" name="password1"   required />
-                                        <label for="input" class="control-label">Password <span
-                                                class="red-asterisk">*</span></label><i class="bar"></i>    
+                                        <label for="input" class="control-label" style="font-weight: bold;">Password <span
+                                            class="red-asterisk">*</span></label><i class="bar"></i><br>
+                                        <input id="password-employee" type="password" name="password1"   required style="width: 80%" placeholder="**********"/>
+                                     
                                     </div>
 
                                     <div class="form-group">
-                                        <input id="confirm-password-employee" name="password2" type="password" required>
-                                        <label class="control-label" for="passwordinput">Password Confirmation <span
-                                                class="red-asterisk">*</span>
-                                        </label><i class="bar"></i>
+                                        <label class="control-label" for="passwordinput" style="font-weight: bold;">Password Confirmation <span
+                                            class="red-asterisk">*</span>
+                                    </label><i class="bar"></i><br>
+                                        <input id="confirm-password-employee" name="password2" type="password" required style="width: 80%" placeholder="**********">
+                          
                                     </div>
 
                                    
